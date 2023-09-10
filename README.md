@@ -9,16 +9,16 @@ This program was used in the recently published study:
 Mussetto, V., Teuchmann, H. L., Heinke, B., Trofimova, L., Sandkühler, J., Drdla-Schutting, R., & Hogri, R. (2023). Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat. The Journal of Pain.
 For additional context and related results, please [see publication](https://www.sciencedirect.com/science/article/pii/S1526590023004054) (Fig. 3, in particular). 
 
-**Background**
+## Background
 In many brain cells (e.g., neurons, astrocytes), the level of activity is correlated with the amount of intracellular calcium. These calcium signals can be quantified in imaging experiments. Typically, many cells are imaged simultaneously, and their calcium activity is analyzed offline. One major challenge in these experiments is that the experimental medium (e.g., a brain slice in a bath) is not completely stationary. Thus, movements in all 3 directions are possible, leading to was is known as ‘signal drift’. Therefore, analyzing calcium signals requires pre-processing steps that correct for this drift. 
 The Spike2 program ‘Automated_calcium_analysis.s2s’ processes data from text files that were produced by the image processing program ImageJ. In these text files, each column represents a channel (brain cell), and each row represents the intensity of the calcium signal recorded from this cell per 1 second period. The example text file (‘example_recording_15chans_cocktail.txt’) contains data from 15 cells recorded for 6 minutes. The first 30 seconds of the recording are a baseline period, after which a substance is applied to the brain tissue. The application of the substance is expected to result in elevated intracellular calcium in some of the recorded cells beginning ~30 seconds later. 
 
-**How it works**
+## How it works
 The program cleans the calcium data, visualizes it, and extracts features of the detected calcium signals. It creates two output files: a txt file holding the clean data values for all cells, and a csv file containing a summary of the results obtained. 
 To facilitate code review, I also enclose a PDF version of the program file: ‘Automated_calcium_analysis.s2s.pdf’. For detailed information on the Spike2 scripting language, please see this manual. 
 The main steps of the program are described and shown below. For additional details, please comments within the program file. 
  
-**Steps:**
+## Steps:
 *Before starting, the user should review and adjust the ‘user-defined variables’ as needed (see program file), then run the program on Spike2. 
 
 1.The program prompts the user to select the txt data file to be processed, and reads this file. 
