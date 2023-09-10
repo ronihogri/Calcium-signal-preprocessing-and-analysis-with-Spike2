@@ -21,23 +21,25 @@ The main steps of the program are described and shown below. For additional deta
 ## Steps:
 *Before starting, the user should review and adjust the ‘user-defined variables’ as needed (see program file), then run the program on Spike2. 
 
-1.The program prompts the user to select the txt data file to be processed, and reads this file. 
+1. The program prompts the user to select the txt data file to be processed, and reads this file.
 
-2. For each column (brain cell) in the txt file, the program uses a running window to correct for drift over time. For each time point (row), raw intensity values are converted to dF/F, where F is the time window under consideration and dF is the difference between F and the current time point. 
+2. For each column (brain cell) in the txt file, the program uses a running window to correct for drift over time. For each time point (row), raw intensity values are converted to dF/F, where F is the time window under consideration and dF is the difference between F and the current time point.
 
 3. For visualization and inspection purposes, dF/F values are imported into a Spike2 .smr data file, named after the original txt file.
 
-4. If specified by the user, a high-pass filter is applied to further correct for drift over the recording time. 
+4. If specified by the user, a high-pass filter is applied to further correct for drift over the recording time.
 
-![](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/smr%20waveforms.png) 
-Example showing dF/F values from the 15 cells included in the ‘example_recording_15chans_cocktail.txt’ file. In this case, a high-pass filter (0.001 Hz, 2nd order Bessel filter) was applied to further correct for drift over time. The vertical line represents the time point at which a drug was applied (30 seconds into the recording). 
+![Image](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/smr%20waveforms.png) 
+   Example showing dF/F values from the 15 cells included in the 'example_recording_15chans_cocktail.txt' file. In this case, a high-pass filter (0.001 Hz, 2nd order Bessel filter) was applied to further correct for drift over time. The vertical line represents the time point at which a drug was applied (30 seconds into the recording).
 
- 
-5. The mean and standard deviation of dF/F values during the baseline period (first 30 seconds) are used to calculate the threshold amplitude. Any signal that exceeds this threshold for a defined minimal duration (e.g., 5 seconds) is considered a ‘calcium event’. Detected events are visualized in the .smr data file. An example of 5 channels is shown below, with calcium events detected in channels 1-4. The duration of events is marked in the corresponding ‘Events’ channels, above the waveforms. 
-![](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/waveforms%20and%20events.png) 
+5. The mean and standard deviation of dF/F values during the baseline period (first 30 seconds) are used to calculate the threshold amplitude. Any signal that exceeds this threshold for a defined minimal duration (e.g., 5 seconds) is considered a 'calcium event'. Detected events are visualized in the .smr data file. An example of 5 channels is shown below, with calcium events detected in channels 1-4. The duration of events is marked in the corresponding 'Events' channels, above the waveforms.
 
-6. For each calcium event, the program extracts the duration, peak amplitude, and area over threshold. 
+![Image](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/waveforms%20and%20events.png) 
 
-7. Two new files are created (see example files enclosed): 
-i. A text file ending with ‘_drift_corrected.txt’, holding all data points for all cells as dF/F values. 
-ii. A CSV file ending with ‘_SUMMARY.csv’, which contains the summary of the main results from the cells included in the analysis. For each cell in which calcium events were detected, the duration, peak amplitude, and area over threshold of calcium events are reported. 
+6. For each calcium event, the program extracts the duration, peak amplitude, and area over threshold.
+
+7. Two new files are created (see example files enclosed):
+
+   i. A text file ending with '_drift_corrected.txt', holding all data points for all cells as dF/F values.
+
+      ii. A CSV file ending with '_SUMMARY.csv', which contains the summary of the main results from the cells included in the analysis. For each cell in which calcium events were detected, the duration, peak amplitude, and area over threshold of calcium events are reported.
