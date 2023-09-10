@@ -2,11 +2,11 @@
 Spike2 script for handling calcium imaging data. The program cleans the data, visualizes it, and extracts features of the detected calcium signals. It creates two output files: a txt file holding the clean data values for all cells, and a csv file containing a summary of the results obtained. 
 
 # Data processing and extraction from multi-cellular calcium imaging
-Example project using the Spike2 programming language, widely used to process physiological data.
+Example project using the [Spike2 programming language](https://ced.co.uk/products/spkovsl), widely used to process physiological data.
 Roni Hogri, August 2023
 
 This program was used in the recently published study: 
-Mussetto, V., Teuchmann, H. L., Heinke, B., Trofimova, L., Sandkühler, J., Drdla-Schutting, R., & Hogri, R. (2023). Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat. The Journal of Pain.
+Mussetto, V., Teuchmann, H. L., Heinke, B., Trofimova, L., Sandkühler, J., Drdla-Schutting, R., & Hogri, R. (2023). Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat. *The Journal of Pain*.
 For additional context and related results, please [see publication](https://www.sciencedirect.com/science/article/pii/S1526590023004054) (Fig. 3, in particular). 
 
 ## Background
@@ -15,7 +15,7 @@ The Spike2 program ‘Automated_calcium_analysis.s2s’ processes data from text
 
 ## How it works
 The program cleans the calcium data, visualizes it, and extracts features of the detected calcium signals. It creates two output files: a txt file holding the clean data values for all cells, and a csv file containing a summary of the results obtained. 
-To facilitate code review, I also enclose a PDF version of the program file: ‘Automated_calcium_analysis.s2s.pdf’. For detailed information on the Spike2 scripting language, please see this manual. 
+To facilitate code readability for people who don't have Spike2 installed, I also enclose a PDF version of the program file: ‘Automated_calcium_analysis.s2s.pdf’. For detailed information on the Spike2 scripting language, please see this [manual](https://ced.co.uk/img/Spike9.pdf). 
 The main steps of the program are described and shown below. For additional details, please comments within the program file. 
  
 ## Steps:
