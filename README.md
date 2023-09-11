@@ -1,6 +1,6 @@
 # Data processing and extraction from multi-cellular calcium imaging with Spike2
 A program using the [Spike2 scripting language](https://ced.co.uk/products/spkovsl) to process calcium imaging data. The program cleans the data, visualizes it, and extracts features of the detected calcium signals. It creates two output files: a txt file holding the clean data values for all cells, and a csv file containing a summary of the results obtained.  
-Roni Hogri, August 2023
+Roni Hogri, July 2022
 <br><br>
 This program was used in the recently published study: 
 Mussetto, V., Teuchmann, H. L., Heinke, B., Trofimova, L., Sandkühler, J., Drdla-Schutting, R., & Hogri, R. (2023). Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat. *The Journal of Pain*.
