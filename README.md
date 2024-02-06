@@ -39,9 +39,6 @@ The main steps of the program are described and shown below. For additional deta
 
    i. A text file ending with '_drift_corrected.txt', holding all data points for all cells as dF/F values.
 
-   ii. A CSV file ending with '_SUMMARY.csv', which contains the summary of the main results from the cells included in the analysis. For each cell in which calcium events were detected, the duration, peak amplitude, and area over threshold of calcium events are reported.
+   ii. A CSV file ending with '_SUMMARY.csv', which contains the summary of the main results from the cells included in the analysis. For each cell in which calcium events were detected, the duration, peak amplitude, and area over threshold of calcium events are reported. For example, the image below, adapted from our article "Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat" (Mussetto *et al.*, [Journal of Pain](https://www.jpain.org/article/S1526-5900(23)00405-4/fulltext), 2023), shows results we extracted regarding calcium events in astrocytes: 
 
-<br><br>  
-
-
-![Image](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/fig3%20results.png) Results extracted from calcium signals and used in the publication "Opioids Induce Bidirectional Synaptic Plasticity in a Brainstem Pain Center in the Rat" (Mussetto *et al.*, [Journal of Pain](https://www.jpain.org/article/S1526-5900(23)00405-4/fulltext), 2023)
+![Image](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/fig3%20results.png) 
