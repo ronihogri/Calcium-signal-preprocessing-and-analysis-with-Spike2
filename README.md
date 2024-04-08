@@ -18,10 +18,12 @@ The program cleans the calcium data, visualizes it, and extracts features of the
 To facilitate code readability for people who don't have Spike2 installed, I also enclose a PDF version of the program file: [Automated_calcium_analysis.s2s.pdf](https://github.com/ronihogri/Calcium-signal-preprocessing-and-analysis-with-Spike2/blob/main/src/Automated_calcium_analysis.s2s.pdf). For detailed information on the Spike2 scripting language, please see this [manual](https://ced.co.uk/img/Spike9.pdf). 
 The main steps of the program are described and shown below. For additional details, please comments within the program file. 
  <br><br>
- 
+
 ## Steps:
 
 ### Installation
+
+* Install Spike2 if you haven't already - see https://ced.co.uk/products/spkovin
 
 ```console
 # Clone/download the contents of this repository. 
@@ -29,9 +31,8 @@ $ git clone https://github.com/ronihogri/Calcium-signal-preprocessing-and-analys
 
 # Go to the appropriate directory
 $ cd Calcium-signal-preprocessing-and-analysis-with-Spike2
-
-# install Spike2 if you haven't already - see https://ced.co.uk/products/spkovin
 ```
+
 
 ### Workflow
 
